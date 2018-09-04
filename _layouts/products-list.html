@@ -1,0 +1,14 @@
+---
+layout: pages
+---
+<div class="row">{% for post in site.categories["products"] %}{% if post.type-en == page.type-en %}
+  <div class="col-sm-6 col-md-4 margin-bottom-30">
+    <div class="thumbnail">
+      <a href="{{ site.url }}{{ post.url }}"><img src="/images/products/{{ post.image }}.jpg" alt="{{ post.title }}"></a>
+      <div class="caption text-center">
+        <h4 class="margin-bottom-30">{{ post.title }}</h4>
+        <a href="{{ site.url }}{{ post.url }}" class="btn btn-primary">Learn More</a>
+      </div>
+    </div>
+  </div>{% endif %}{% endfor %}
+</div>

@@ -1,0 +1,29 @@
+url: https://www.fenlinmusicfountain.com
+
+title: WATER SHOW
+
+keywords: WATER SHOW
+
+description: WATER SHOW
+
+address: No.1 Shuanggang Village, Jianggao town, Baiyun district, Guangzhou City, Guangdong Province, China.
+
+tel: 020-36528565
+
+fax: 020-81951225
+
+email: admin@gzfenlin.com.cn
+
+exclude:
+  - README.md
+
+assets:
+  dirname: assets
+  baseurl: /assets/
+  sources:
+    - _assets/js
+    - _assets/css
+  compress:
+    css: true
+    js: true
+  gzip: []

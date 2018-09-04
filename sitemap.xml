@@ -1,0 +1,30 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+   <loc>{{ site.url }}</loc>
+   <lastmod>{{ site.time | date:'%Y-%m-%d' }}</lastmod>
+   <changefreq>daily</changefreq>
+   <priority>1.0</priority>
+</url>{% for sp in site.pages %}{% if sp.url contains '.js' or sp.url contains '.json' %}{% else %}{% capture lvl %}{{ sp.url | append:'index.html' | split:'/' | size }}{% endcapture %}{% if lvl == '3' %}
+<url>
+   <loc>{{ site.url }}{{ sp.url | remove:'index.html' }}</loc>
+   <lastmod>{{ site.time | date:'%Y-%m-%d' }}</lastmod>
+   <changefreq>daily</changefreq>
+   <priority>0.8</priority>
+</url>{% endif %}{% endif %}{% endfor %}{% for sp in site.pages %}{% if sp.url contains '.js' or sp.url contains '.json' %}{% else %}{% capture lvl %}{{ sp.url | append:'index.html' | split:'/' | size }}{% endcapture %}{% if lvl > '3' %}
+<url>
+   <loc>{{ site.url }}{{ sp.url | remove:'index.html' }}</loc>
+   <lastmod>{{ site.time | date:'%Y-%m-%d' }}</lastmod>
+   <changefreq>weekly</changefreq>
+   <priority>0.6</priority>
+</url>{% endif %}{% endif %}{% endfor %}{% for post in site.posts %}
+<url>
+   <loc>{{ site.url }}{{ post.url }}</loc>
+   <lastmod>{{ site.time | date:'%Y-%m-%d' }}</lastmod>
+   <changefreq>weekly</changefreq>
+   <priority>0.6</priority>
+</url>{% endfor %}
+</urlset>

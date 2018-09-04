@@ -1,0 +1,111 @@
+---
+layout: default
+category: home
+full_title: WATER SHOW
+---
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner" role="listbox">
+    <div class="item active"><img src="/images/home/billboard-1.jpg" alt=""></div>
+    <div class="item"><img src="/images/home/billboard-2.jpg" alt=""></div>
+    <div class="item"><img src="/images/home/billboard-3.jpg" alt=""></div>
+  </div>
+</div>
+<div class="container margin-top-30">
+  <div class="row">
+    <div class="section-heading-center section-heading-linethrough">
+      <h2 class="heading">Products</h2>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 margin-bottom-30">
+      <div class="thumbnail">
+        <a href="{{ site.url }}/large-fountain/"><img src="/images/products/large-fountain.jpg" alt="Large Fountain"></a>
+        <div class="caption text-center">
+          <h4 class="margin-bottom-30">Large Fountain</h4>
+          <a href="{{ site.url }}/large-fountain/" class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 margin-bottom-30">
+      <div class="thumbnail">
+        <a href="{{ site.url }}/dry-fountain/"><img src="/images/products/dry-fountain.jpg" alt="Dry Fountain"></a>
+        <div class="caption text-center">
+          <h4 class="margin-bottom-30">Dry Fountain</h4>
+          <a href="{{ site.url }}/dry-fountain/" class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 margin-bottom-30">
+      <div class="thumbnail">
+        <a href="{{ site.url }}/floating-fountain/"><img src="/images/products/floating-fountain.jpg" alt="Floating Fountain"></a>
+        <div class="caption text-center">
+          <h4 class="margin-bottom-30">Floating Fountain</h4>
+          <a href="{{ site.url }}/floating-fountain/" class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 margin-bottom-30">
+      <div class="thumbnail">
+        <a href="{{ site.url }}/fountain-project/"><img src="/images/products/fountain-project.jpg" alt="Fountain Project"></a>
+        <div class="caption text-center">
+          <h4 class="margin-bottom-30">Fountain Project</h4>
+          <a href="{{ site.url }}/fountain-project/" class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 margin-bottom-30">
+      <div class="thumbnail">
+        <a href="{{ site.url }}/fountain-design/"><img src="/images/products/fountain-design.jpg" alt="Fountain Design"></a>
+        <div class="caption text-center">
+          <h4 class="margin-bottom-30">Fountain Design</h4>
+          <a href="{{ site.url }}/fountain-design/" class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 margin-bottom-30">
+      <div class="thumbnail">
+        <a href="{{ site.url }}/fountain-nozzle/"><img src="/images/products/fountain-nozzle.jpg" alt="Fountain Nozzle"></a>
+        <div class="caption text-center">
+          <h4 class="margin-bottom-30">Fountain Nozzle</h4>
+          <a href="{{ site.url }}/fountain-nozzle/" class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="section-heading-center section-heading-linethrough">
+      <h2 class="heading">About Water Show</h2>
+    </div>
+    <div class="col-sm-6 col-md-6 margin-bottom-30">
+      <a data-fancybox href="https://youtu.be/B1XiG08JFzs"><img src="/images/home/about-video.jpg" class="img-responsive center-block img-thumbnail" alt="Water Show"></a>
+    </div>
+    <div class="col-sm-6 col-md-6 margin-bottom-30 text-justify">
+      <p>Guangdong Watershow Fountain Equipment Project Co., Ltd established in 2004, professional in producing and selling fountain equipments.etc.</p>
+      <p>Striving in creating, quality and service for these years, we have possessed our own brand, in the meantime, have developed our foreign market of around one hundred countries as well as developed a sales network covers most of the eastern big cities at home.<p>
+      <p>We have over 14 years producting & sales exprencie, our factory can aviable OMD, OED, oversea fountain project installation service.</p>
+      <p>Our Fountain Project cover Saudi Arabic, Sudan, Qatar, Egypt, Malaysia, ingapore，Kazakhstan so on many countries.</p>
+      <p>Our manufacture located in Guangzhou Baiyun Area(here only 30min from Guangzhou airport to factory), can avalible pick up servise if you want visit our factory.<a href="{{ site.url }}/about/">Learn More</a></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="section-heading-center section-heading-linethrough">
+      <h2 class="heading">Last News</h2>
+    </div>
+    <div class="blog-masonry clearfix margin-bottom-30">{% for post in site.categories["news"] limit:3 %}
+      <div class="col-sm-6 col-md-4 margin-bottom-30">
+        <div class="post-entry-card">
+          <a href="{{ site.url }}{{ post.url }}"><img src="/images/news/{{ post.image }}.jpg" class="img-responsive" alt="{{ post.title }}"></a>
+          <div class="post-info">
+            <h3 class="post-title"><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h3>
+            <p class="post-excerpt">{{ post.description }}</p>
+            <span class="post-meta"><i class="fa fa-calendar-o"></i> {{ post.date | date:"%d %b %Y" }}</span>
+            <a href="{{ site.url }}{{ post.url }}" class="read-more pull-right">Read More</a>
+          </div>
+        </div>
+      </div>{% endfor %}
+    </div>
+  </div>
+</div>

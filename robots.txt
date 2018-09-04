@@ -1,0 +1,8 @@
+---
+layout: null
+---
+User-agent: *
+Disallow: /Error.html
+Disallow: /favicon.ico
+
+Sitemap: {{ site.url }}/sitemap.xml

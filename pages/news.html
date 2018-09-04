@@ -1,0 +1,23 @@
+---
+layout: pages
+permalink: /news/
+category: news
+title: News
+keywords: 
+description: 
+---
+<div class="blog-masonry clearfix">
+<div class="row">{% for post in site.categories["news"] %}
+  <div class="col-sm-6 col-md-4 margin-bottom-30">
+    <div class="post-entry-card">
+      <a href="{{ site.url }}{{ post.url }}"><img src="/images/news/{{ post.image }}.jpg" class="img-responsive" alt="{{ post.title }}"></a>
+      <div class="post-info">
+        <h3 class="post-title"><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h3>
+        <p class="post-excerpt">{{ post.description }}</p>
+        <span class="post-meta"><i class="fa fa-calendar-o"></i> {{ post.date | date:"%d %b %Y" }}</span>
+        <a href="{{ site.url }}{{ post.url }}" class="read-more pull-right">Read More</a>
+      </div>
+    </div>
+  </div>{% endfor %}
+</div>
+</div>
