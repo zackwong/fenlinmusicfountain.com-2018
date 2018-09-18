@@ -28,14 +28,5 @@ pinterest: https://www.pinterest.com/watershowfountain/
 
 exclude:
   - README.md
-
-assets:
-  dirname: assets
-  baseurl: /assets/
-  sources:
-    - _assets/js
-    - _assets/css
-  compress:
-    css: true
-    js: true
-  gzip: []
+  - style.css
+  - style.js
