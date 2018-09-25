@@ -67,49 +67,59 @@
             <div class="col-sm-6 col-md-4">
               <p><img src="/images/assets/water-show-logo.png" alt="WATER SHOW Logo" class="logo-footer"></p>
               <br>
-              <address class="contact-info">
-                <p><i class="fa fa-map-marker ico-styled text-primary"></i> {{ site.address }}</p>
-                <p><i class="fa fa-phone ico-styled text-primary"></i> <a href="tel:{{ site.tel }}">{{ site.tel }}</a></p>
-                <p><i class="fa fa-fax ico-styled text-primary"></i> {{ site.fax }}</p>
-                <p><i class="fa fa-envelope ico-styled text-primary"></i> <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
-              </address>
+              <div itemscope itemtype="http://schema.org/Organization">
+                <address class="contact-info">
+                  <p><i class="fa fa-map-marker ico-styled text-primary"></i> <span itemprop="address">{{ site.address }}</span></p>
+                  <p><i class="fa fa-phone ico-styled text-primary"></i> <a href="tel:{{ site.tel }}"><span itemprop="telephone">{{ site.tel }}</span></a></p>
+                  <p><i class="fa fa-fax ico-styled text-primary"></i> {{ site.fax }}</p>
+                  <p><i class="fa fa-envelope ico-styled text-primary"></i> <a href="mailto:{{ site.email }}"><span itemprop="email">{{ site.email }}</span></a></p>
+                </address>
+              </div>
             </div>
             <div class="col-sm-6 col-md-4 hidden-xs">
               <div class="col-sm-12 col-md-12">
                 <h4 class="footer-heading">Products</h4>
               </div>
               <div class="col-sm-6 col-md-6">
-                <ul class="list-unstyled link-list">
-                  <li class="active"><a href="{{ site.url }}/small-fountain/">Small Fountain</a></li>
-                  <li><a href="{{ site.url }}/middle-fountain/">Middle Fountain</a></li>
-                  <li><a href="{{ site.url }}/large-fountain/">Large Fountain</a></li>
-                  <li><a href="{{ site.url }}/water-rain-fountain/">Water Rain Fountain</a></li>
-                  <li><a href="{{ site.url }}/dry-fountain/">Dry Fountain</a></li>
-                  <li><a href="{{ site.url }}/jumping-jet/">Jumping Jet</a></li>
-                </ul>
+                <div itemscope itemtype="http://schema.org/Product">
+                  <ul class="list-unstyled link-list">
+                    <li class="active"><a href="{{ site.url }}/small-fountain/">Small Fountain</a></li>
+                    <li><a itemprop="url" href="{{ site.url }}/middle-fountain/">Middle Fountain</a></li>
+                    <li><a itemprop="url" href="{{ site.url }}/large-fountain/">Large Fountain</a></li>
+                    <li><a itemprop="url" href="{{ site.url }}/water-rain-fountain/">Water Rain Fountain</a></li>
+                    <li><a itemprop="url" href="{{ site.url }}/dry-fountain/">Dry Fountain</a></li>
+                    <li><a itemprop="url" href="{{ site.url }}/jumping-jet/">Jumping Jet</a></li>
+                  </ul>
+                </div>
               </div>
               <div class="col-sm-6 col-md-6">
-                <ul class="list-unstyled link-list">
-                  <li><a href="{{ site.url }}/floating-fountain/">Floating Fountain</a></li>
-                  <li><a href="{{ site.url }}/fountain-project/">Fountain Project</a></li>
-                  <li><a href="{{ site.url }}/fountain-design/">Fountain Design</a></li>
-                  <li><a href="{{ site.url }}/fountain-lights/">Fountain Lights</a></li>
-                  <li><a href="{{ site.url }}/fountain-nozzle/">Fountain Nozzle</a></li>
-                </ul>
+                <div itemscope itemtype="http://schema.org/Product">
+                  <ul class="list-unstyled link-list">
+                    <li><a itemprop="url" href="{{ site.url }}/floating-fountain/">Floating Fountain</a></li>
+                    <li><a itemprop="url" href="{{ site.url }}/fountain-project/">Fountain Project</a></li>
+                    <li><a itemprop="url" href="{{ site.url }}/fountain-design/">Fountain Design</a></li>
+                    <li><a itemprop="url" href="{{ site.url }}/fountain-lights/">Fountain Lights</a></li>
+                    <li><a itemprop="url" href="{{ site.url }}/fountain-nozzle/">Fountain Nozzle</a></li>
+                  </ul>
+                </div>
               </div>
             </div>
             <div class="col-sm-6 col-md-4 hidden-xs">
-              <h4 class="footer-heading">News</h4>
-              <ul class="list-unstyled latest-news-footer">{% for post in site.categories["news"] limit:4 %}
-                <li class="news-item">
-                  <h5 class="title"><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h5>
-                  <span>{{ post.date | date:"%d %b %Y" }}</span>
-                </li>{% endfor %}
-              </ul>
+              <div itemscope itemtype="http://schema.org/Article">
+                <h4 class="footer-heading"><span itemprop="name">News</span></h4>
+                <ul class="list-unstyled latest-news-footer">{% for post in site.categories["news"] limit:4 %}
+                  <li class="news-item">
+                    <h5 class="title"><a itemprop="url" href="{{ site.url }}{{ post.url }}"><span itemprop="headline">{{ post.title }}</span></a></h5>
+                    <span itemprop="dateCreated">{{ post.date | date:"%d %b %Y" }}</span>
+                  </li>{% endfor %}
+                </ul>
+              </div>
             </div>
           </div>
           <div class="footer-bottom">
-            <p class="copyright-text left">&copy;2017-2018 Guangdong Watershow Fountain Equipment Project Co., Ltd | <a href="{{ site.url }}/sitemap.xml">Sitemap</a></p>
+            <div itemscope itemtype="http://schema.org/Organization">
+              <p class="copyright-text left">&copy;2017-2018 <span itemprop="name">Guangdong Watershow Fountain Equipment Project Co., Ltd</span> | <a href="{{ site.url }}/sitemap.xml">Sitemap</a></p>
+            </div>
             <ul class="list-inline social-icons social-icons-small right">
               <li><a href="{{ site.facebook }}" target="_blank" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
               <li><a href="{{ site.twitter }}" target="_blank" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
