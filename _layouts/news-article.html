@@ -1,13 +1,17 @@
 ---
 layout: article
 ---
-<article class="entry-post entry-post-single">
-  <header class="entry-header text-center">
-    <h1 class="entry-title text-center">{{ page.title }}</h1>
-    <div class="meta-line"><span class="post-date"><i class="fa fa-calendar"></i> {{ page.date | date:"%d %b %Y" }}</span></div>
-  </header>
-  <div class="content">
-    {{ content }}
-    <p class="text-center"><a href="{{ site.url }}/news/" class="btn btn-primary btn-block btn-lg margin-top-30">More News</a></p>
-  </div>
-</article>
+<div itemscope itemtype="http://schema.org/Article">
+  <article class="entry-post entry-post-single">
+    <header class="entry-header text-center">
+      <h1 class="entry-title text-center"><span itemprop="headline" style="font-weight:900">{{ page.title }}</span></h1>
+      <div class="meta-line"><span itemprop="dateCreated" class="post-date"><i class="fa fa-calendar"></i> {{ page.date | date:"%d %b %Y" }}</span></div>
+    </header>
+    <div class="content">
+      <span itemprop="articleBody">
+        {{ content }}
+      </span>
+      <p class="text-center"><a href="{{ site.url }}/news/" class="btn btn-primary btn-block btn-lg margin-top-30">More News</a></p>
+    </div>
+  </article>
+</div>
