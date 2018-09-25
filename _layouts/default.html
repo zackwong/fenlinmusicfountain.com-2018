@@ -109,7 +109,7 @@
                 <h4 class="footer-heading"><span itemprop="name">News</span></h4>
                 <ul class="list-unstyled latest-news-footer">{% for post in site.categories["news"] limit:4 %}
                   <li class="news-item">
-                    <h5 class="title"><a itemprop="url" href="{{ site.url }}{{ post.url }}"><span itemprop="headline">{{ post.title }}</span></a></h5>
+                    <h5 class="title"><a itemprop="url" href="{{ site.url }}{{ post.url }}"><span itemprop="headline" style="font-size:14px;color:#8c8c8c">{{ post.title }}</span></a></h5>
                     <span itemprop="dateCreated">{{ post.date | date:"%d %b %Y" }}</span>
                   </li>{% endfor %}
                 </ul>
