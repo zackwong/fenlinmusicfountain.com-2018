@@ -12772,7 +12772,7 @@ html, body {
 
 .navbar-brand {
   height: auto;
-  padding: 15px 15px; }
+  padding: 10px 15px; }
 
 @media screen and (max-width: 992px) {
   .navbar-toggle {
