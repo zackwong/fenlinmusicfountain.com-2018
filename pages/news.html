@@ -9,14 +9,18 @@ description:
 <div class="blog-masonry clearfix">
 <div class="row">{% for post in site.categories["news"] %}
   <div itemscope itemtype="http://schema.org/Article">
-  <div class="col-sm-6 col-md-4 margin-bottom-30">
+  <div class="col-sm-12 col-md-12 margin-bottom-30">
     <div class="post-entry-card">
-      <a itemprop="url" href="{{ site.url }}{{ post.url }}"><img itemprop="thumbnailUrl" src="/images/news/{{ post.image }}.jpg" class="img-responsive" alt="{{ post.title }}"></a>
-      <div class="post-info">
-        <h3 class="post-title"><a href="{{ site.url }}{{ post.url }}"><span itemprop="headline">{{ post.title }}</span></a></h3>
-        <p class="post-excerpt"><span itemprop="description">{{ post.description }}</span></p>
-        <span itemprop="dateCreated" class="post-meta"><i class="fa fa-calendar-o"></i> {{ post.date | date:"%d %b %Y" }}</span>
-        <a itemprop="url" href="{{ site.url }}{{ post.url }}" class="read-more pull-right">Read More</a>
+      <div class="col-sm-6 col-md-6">
+        <a itemprop="url" href="{{ site.url }}{{ post.url }}"><img itemprop="thumbnailUrl" src="/images/news/{{ post.image }}.jpg" class="img-responsive" alt="{{ post.title }}"></a>
+      </div>
+      <div class="col-sm-6 col-md-6">
+        <div class="post-info">
+          <h3 class="post-title"><a href="{{ site.url }}{{ post.url }}"><span itemprop="headline">{{ post.title }}</span></a></h3>
+          <p class="post-excerpt"><span itemprop="description">{{ post.description }}</span></p>
+          <span itemprop="dateCreated" class="post-meta"><i class="fa fa-calendar-o"></i> {{ post.date | date:"%d %b %Y" }}</span>
+          <a itemprop="url" href="{{ site.url }}{{ post.url }}" class="read-more pull-right">Read More</a>
+        </div>
       </div>
     </div>
   </div>
