@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: pages
 ---
 <article class="entry-post entry-post-single">
   <header class="entry-header">
@@ -201,19 +201,6 @@ layout: article
         <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/{{ page.video }}"></iframe>
       </div>
     </div>{% endif %}
-    <div class="col-md-12 margin-top-30 margin-bottom-30 text-center">
-      <h2 class="heading-border-bottom border-primary">More {{ page.type }}</h2>
-    </div>
-    <div class="row">{% for post in site.categories["products"] %}{% if post.type-en == page.type-en %}
-      <div class="col-sm-6 col-md-4 margin-bottom-30">
-        <div class="thumbnail">
-          <a href="{{ site.url }}{{ post.url }}"><img src="/images/products/{{ post.image }}.jpg" alt="{{ post.title }}"></a>
-          <div class="caption text-center">
-            <h4 class="margin-bottom-30">{{ post.title }}</h4>
-            <a href="{{ site.url }}{{ post.url }}" class="btn btn-primary">Learn More</a>
-          </div>
-        </div>
-      </div>{% endif %}{% endfor %}
-    </div>
+    {% include products-list.html %}
   </div>
 </article>
