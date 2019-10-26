@@ -27,7 +27,7 @@
         <div class="container">
           <ul class="luxbar-navigation">
             <li class="luxbar-header">
-              <a href="{{ site.url }}"><img src="{{ site.url }}/images/assets/water-show-logo.png" width="143" height="53" alt="WATER SHOW Logo"></a>
+              <a href="{{ site.url }}"><img src="{{ site.url }}/images/assets/water-show-logo.png" width="143" height="50" alt="WATER SHOW Logo"></a>
               <label class="luxbar-hamburger luxbar-hamburger-doublespin" id="luxbar-hamburger" for="luxbar-checkbox"> <span></span> </label>
             </li>
             <li class="luxbar-item dropdown {% if page.category == 'products' %}active{% endif %}"><a href="{{ site.url }}/products/">Products</a>
@@ -43,77 +43,74 @@
       </div>
     </header>
     <div class="margin-top-58"></div>
-    <div id="wrapper">
-      
-      {{ content }}
-      <footer>
-        <div class="container">
-          <div class="row margin-bottom-30">
-            <div class="col-sm-6 col-md-4">
-              <p><img src="/images/assets/water-show-logo.png" alt="WATER SHOW Logo" class="logo-footer"></p>
-              <br>
-              <div itemscope itemtype="http://schema.org/Organization">
-                <address class="contact-info">
-                  <p><i class="fa fa-map-marker ico-styled text-primary"></i> <span itemprop="address">{{ site.address }}</span></p>
-                  <p><i class="fa fa-phone ico-styled text-primary"></i> <a href="tel:{{ site.tel1 }}"><span itemprop="telephone">{{ site.tel1 }}</span></a></p>
-                  <p><i class="fa fa-phone ico-styled text-primary"></i> <a href="tel:{{ site.tel2 }}"><span itemprop="telephone">{{ site.tel2 }}</span></a>(Alina Li)</p>
-                  <p><i class="fa fa-phone ico-styled text-primary"></i> <a href="tel:{{ site.tel3 }}"><span itemprop="telephone">{{ site.tel3 }}</span></a>(Flair Wu)</p>
-                  <p><i class="fa fa-fax ico-styled text-primary"></i> {{ site.fax }}</p>
-                  <p><i class="fa fa-envelope ico-styled text-primary"></i> <a href="mailto:{{ site.email }}"><span itemprop="email">{{ site.email }}</span></a></p>
-                </address>
+    {{ content }}
+    <footer>
+      <div class="container">
+        <div class="row margin-bottom-30">
+          <div class="col-sm-6 col-md-4">
+            <p><img src="/images/assets/water-show-logo.png" alt="WATER SHOW Logo" class="logo-footer"></p>
+            <br>
+            <div itemscope itemtype="http://schema.org/Organization">
+              <address class="contact-info">
+                <p><i class="fa fa-map-marker ico-styled text-primary"></i> <span itemprop="address">{{ site.address }}</span></p>
+                <p><i class="fa fa-phone ico-styled text-primary"></i> <a href="tel:{{ site.tel1 }}"><span itemprop="telephone">{{ site.tel1 }}</span></a></p>
+                <p><i class="fa fa-phone ico-styled text-primary"></i> <a href="tel:{{ site.tel2 }}"><span itemprop="telephone">{{ site.tel2 }}</span></a>(Alina Li)</p>
+                <p><i class="fa fa-phone ico-styled text-primary"></i> <a href="tel:{{ site.tel3 }}"><span itemprop="telephone">{{ site.tel3 }}</span></a>(Flair Wu)</p>
+                <p><i class="fa fa-fax ico-styled text-primary"></i> {{ site.fax }}</p>
+                <p><i class="fa fa-envelope ico-styled text-primary"></i> <a href="mailto:{{ site.email }}"><span itemprop="email">{{ site.email }}</span></a></p>
+              </address>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 hidden-xs">
+            <div class="col-sm-12 col-md-12">
+              <h4 class="footer-heading">Products</h4>
+            </div>
+            <div class="col-sm-6 col-md-6">
+              <div itemscope itemtype="http://schema.org/Product">
+                <ul class="list-unstyled link-list">
+                  <li class="active"><a href="{{ site.url }}/small-fountain/">Small Fountain</a></li>
+                  <li><a itemprop="url" href="{{ site.url }}/middle-fountain/">Middle Fountain</a></li>
+                  <li><a itemprop="url" href="{{ site.url }}/large-fountain/">Large Fountain</a></li>
+                  <li><a itemprop="url" href="{{ site.url }}/water-rain-fountain/">Water Rain Fountain</a></li>
+                  <li><a itemprop="url" href="{{ site.url }}/dry-fountain/">Dry Fountain</a></li>
+                  <li><a itemprop="url" href="{{ site.url }}/jumping-jet/">Jumping Jet</a></li>
+                </ul>
               </div>
             </div>
-            <div class="col-sm-6 col-md-4 hidden-xs">
-              <div class="col-sm-12 col-md-12">
-                <h4 class="footer-heading">Products</h4>
-              </div>
-              <div class="col-sm-6 col-md-6">
-                <div itemscope itemtype="http://schema.org/Product">
-                  <ul class="list-unstyled link-list">
-                    <li class="active"><a href="{{ site.url }}/small-fountain/">Small Fountain</a></li>
-                    <li><a itemprop="url" href="{{ site.url }}/middle-fountain/">Middle Fountain</a></li>
-                    <li><a itemprop="url" href="{{ site.url }}/large-fountain/">Large Fountain</a></li>
-                    <li><a itemprop="url" href="{{ site.url }}/water-rain-fountain/">Water Rain Fountain</a></li>
-                    <li><a itemprop="url" href="{{ site.url }}/dry-fountain/">Dry Fountain</a></li>
-                    <li><a itemprop="url" href="{{ site.url }}/jumping-jet/">Jumping Jet</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-6">
-                <div itemscope itemtype="http://schema.org/Product">
-                  <ul class="list-unstyled link-list">{% for post in site.categories["products"] %}
-                    <li><a itemprop="url" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>{% endfor %}
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-4 hidden-xs">
-              <div itemscope itemtype="http://schema.org/Article">
-                <h4 class="footer-heading"><span itemprop="name">News</span></h4>
-                <ul class="list-unstyled latest-news-footer">{% for post in site.categories["news"] limit:2 %}
-                  <li class="news-item">
-                    <h5 class="title"><a itemprop="url" href="{{ site.url }}{{ post.url }}"><span itemprop="headline" style="font-size:14px;color:#8c8c8c">{{ post.title }}</span></a></h5>
-                    <span itemprop="dateCreated">{{ post.date | date:"%d %b %Y" }}</span>
-                  </li>{% endfor %}
+            <div class="col-sm-6 col-md-6">
+              <div itemscope itemtype="http://schema.org/Product">
+                <ul class="list-unstyled link-list">{% for post in site.categories["products"] %}
+                  <li><a itemprop="url" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>{% endfor %}
                 </ul>
               </div>
             </div>
           </div>
-          <div class="footer-bottom">
-            <div itemscope itemtype="http://schema.org/Organization">
-              <p class="copyright-text left">&copy;2017-2019 <span itemprop="name">Guangdong Watershow Fountain Equipment Project Co., Ltd</span> | <a href="{{ site.url }}/sitemap.xml">Sitemap</a></p>
+          <div class="col-sm-6 col-md-4 hidden-xs">
+            <div itemscope itemtype="http://schema.org/Article">
+              <h4 class="footer-heading"><span itemprop="name">News</span></h4>
+              <ul class="list-unstyled latest-news-footer">{% for post in site.categories["news"] limit:2 %}
+                <li class="news-item">
+                  <h5 class="title"><a itemprop="url" href="{{ site.url }}{{ post.url }}"><span itemprop="headline" style="font-size:14px;color:#8c8c8c">{{ post.title }}</span></a></h5>
+                  <span itemprop="dateCreated">{{ post.date | date:"%d %b %Y" }}</span>
+                </li>{% endfor %}
+              </ul>
             </div>
-            <ul class="list-inline social-icons social-icons-small right">
-              <li><a href="{{ site.facebook }}" target="_blank" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="{{ site.twitter }}" target="_blank" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="{{ site.youtube }}" target="_blank" class="youtube-bg"><i class="fa fa-youtube-play"></i></a></li>
-              <li><a href="{{ site.linkedin }}" target="_blank" class="linkedin-bg"><i class="fa fa-linkedin"></i></a></li>
-              <li><a href="{{ site.pinterest }}" target="_blank" class="pinterest-bg"><i class="fa fa-pinterest"></i></a></li>
-            </ul>
           </div>
         </div>
-      </footer>
-    </div>
+        <div class="footer-bottom">
+          <div itemscope itemtype="http://schema.org/Organization">
+            <p class="copyright-text left">&copy;2017-2019 <span itemprop="name">Guangdong Watershow Fountain Equipment Project Co., Ltd</span> | <a href="{{ site.url }}/sitemap.xml">Sitemap</a></p>
+          </div>
+          <ul class="list-inline social-icons social-icons-small right">
+            <li><a href="{{ site.facebook }}" target="_blank" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="{{ site.twitter }}" target="_blank" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="{{ site.youtube }}" target="_blank" class="youtube-bg"><i class="fa fa-youtube-play"></i></a></li>
+            <li><a href="{{ site.linkedin }}" target="_blank" class="linkedin-bg"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="{{ site.pinterest }}" target="_blank" class="pinterest-bg"><i class="fa fa-pinterest"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
     <div class="back-to-top"><a href="#"><img src="{{ site.url }}/images/assets/up.png" width="26" height="26" alt="Back To Top"></a></div>{% if page.category == 'home' %}
     <script type="text/javascript" src="/assets/application.js"></script>{% endif %}
   </body>

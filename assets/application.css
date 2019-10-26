@@ -370,7 +370,27 @@
   background-color: #e7e7e7; }
 .luxbar-menu-white .luxbar-hamburger span,.luxbar-menu-white .luxbar-hamburger span::before,.luxbar-menu-white .luxbar-hamburger span::after {
   background-color: #000000; }
-
+/*image*/
+img {
+  vertical-align: middle;
+}
+.img-responsive,
+.thumbnail > img,
+.thumbnail a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+/*back-to-top*/
+.back-to-top {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  opacity: 1;
+  cursor: pointer;
+}
 /*Carousel*/
 .img-responsive,
 .carousel-inner > .item > img,
