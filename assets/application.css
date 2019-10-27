@@ -393,9 +393,10 @@ body {
   display: inline-block;
 }
 .breadcrumb > li + li:before {
+  font-family: "FontAwesome";
+  content: "\f101";
   padding: 0 5px;
   color: #ccc;
-  content: "/\00a0";
 }
 .breadcrumb > .active {
   color: #777;
@@ -425,6 +426,34 @@ img {
   -webkit-transition: all .2s ease-in-out;
        -o-transition: all .2s ease-in-out;
           transition: all .2s ease-in-out;
+}
+/*margin*/
+.margin-top-10 {
+  margin-top: 10px;
+}
+.margin-top-20 {
+  margin-top: 20px;
+}
+.margin-top-30 {
+  margin-top: 30px;
+}
+.margin-top-40 {
+  margin-top: 40px;
+}
+.margin-top-58 {
+  margin-top: 58px;
+}
+.margin-top-80 {
+  margin-top: 80px;
+}
+.margin-bottom-20 {
+  margin-bottom: 20px;
+}
+.margin-bottom-30 {
+  margin-bottom: 30px;
+}
+.margin-bottom-80 {
+  margin-bottom: 80px;
 }
 /*back-to-top*/
 .back-to-top {
@@ -1662,6 +1691,9 @@ a.thumbnail.active {
 .fa-calendar-o:before {
   content: "\f133";
 }
+.fa-angle-double-right:before {
+  content: "\f101";
+}
 .fa-map-marker:before {
   content: "\f041";
 }
@@ -2609,24 +2641,3 @@ footer {
     font-size: 13px; }
     .footer-bottom a:hover, .footer-bottom a:focus {
       text-decoration: underline; }
-
-/* -----------------
- * Helper classes
- * -----------------*/
-.margin-top-30 {
-  margin-top: 30px; }
-
-.margin-top-50 {
-  margin-top: 50px; }
-
-.margin-top-58 {
-  margin-top: 58px; }
-
-.margin-bottom-30 {
-  margin-bottom: 30px; }
-
-.margin-bottom-50 {
-  margin-bottom: 50px; }
-
-.padding-left-30 {
-  padding-left: 30px; }
