@@ -1,10 +1,11 @@
 ---
 layout: default
 ---
-<div style="background-color:#f5f5f5">
+<div class="bg-dark">
   <ol class="breadcrumb container">
-    <li><a href="{{ site.url }}">Home</a></li>{% if page.layout == 'products-article' or page.layout == 'news-article' %}
-    <li><a href="{{ site.url }}/{{ page.type-en }}/">{{ page.type }}</a></li>{% endif %}
+    <li><a href="{{ site.url }}">Home</a></li>{% if page.layout == 'products-article' %}
+    <li><a href="{{ site.url }}/products/">Products</a></li>{% endif %}{% if page.layout == 'news-article' %}
+    <li><a href="{{ site.url }}/news/">News</a></li>{% endif %}
     <li class="active">{{ page.title }}</li>
   </ol>
 </div>
