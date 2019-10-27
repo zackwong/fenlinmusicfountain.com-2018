@@ -38,7 +38,7 @@ full_title: WATER SHOW-musical fountain
     <div class="section-heading-center section-heading-linethrough">
       <h2 class="heading">Last News</h2>
     </div>
-    <div class="blog-masonry clearfix margin-bottom-30">{% for post in site.categories["news"] limit:3 %}
+    <div class="blog-masonry margin-bottom-30">{% for post in site.categories["news"] limit:3 %}
       <div class="col-sm-6 col-md-4 margin-bottom-30">
         <div class="post-entry-card">
           <a href="{{ site.url }}{{ post.url }}"><img src="/images/news/{{ post.image }}.jpg" class="img-responsive" alt="{{ post.title }}"></a>
