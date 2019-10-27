@@ -380,6 +380,26 @@ body {
   background-color: #e7e7e7; }
 .luxbar-menu-white .luxbar-hamburger span,.luxbar-menu-white .luxbar-hamburger span::before,.luxbar-menu-white .luxbar-hamburger span::after {
   background-color: #000000; }
+
+/*breadcrumb*/
+.breadcrumb {
+  padding: 8px 15px;
+  margin-bottom: 20px;
+  list-style: none;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+.breadcrumb > li {
+  display: inline-block;
+}
+.breadcrumb > li + li:before {
+  padding: 0 5px;
+  color: #ccc;
+  content: "/\00a0";
+}
+.breadcrumb > .active {
+  color: #777;
+}
 /*image*/
 img {
   vertical-align: middle;
@@ -1256,24 +1276,7 @@ fieldset[disabled] .btn-primary.focus {
   display: block;
 }
 
-.breadcrumb {
-  padding: 8px 15px;
-  margin-bottom: 20px;
-  list-style: none;
-  background-color: #f5f5f5;
-  border-radius: 4px;
-}
-.breadcrumb > li {
-  display: inline-block;
-}
-.breadcrumb > li + li:before {
-  padding: 0 5px;
-  color: #ccc;
-  content: "/\00a0";
-}
-.breadcrumb > .active {
-  color: #777;
-}
+
 
 
 .list-group-item.active > .badge,
@@ -2107,34 +2110,6 @@ ul.link-list li {
   background-color: #cd201f !important;
   border-color: #b71d1c !important; }
 
-/* --------------
- * Breadcrumbs
- * -------------*/
-/* breadcrumbs */
-.breadcrumb {
-  background-color: transparent; }
-  .breadcrumb > li.active {
-    color: #00636b; }
-  .breadcrumb > li + li:before {
-    color: #f3f3f3; }
-  .breadcrumb a {
-    color: #8c8c8c; }
-    .breadcrumb a:hover, .breadcrumb a:focus {
-      text-decoration: none;
-      color: #00636b; }
-  .breadcrumb.link-accent > li.active {
-    color: inherit; }
-  .breadcrumb.link-accent a {
-    color: #00636b; }
-    .breadcrumb.link-accent a:hover, .breadcrumb.link-accent a:focus {
-      text-decoration: none;
-      color: #098c85; }
-  .breadcrumb.separator-arrow > li + li:before {
-    padding: 0 8px;
-    font-family: "FontAwesome";
-    content: '\f105'; }
-
-
 /* -----------
  * Blog
  * ----------*/
@@ -2569,87 +2544,6 @@ ul.link-list li {
 .news-slider .tp-thumb-image {
   opacity: 0.4;
   filter: alpha(opacity=40); }
-
-
-/* ------------
- * Page header 
- * ------------*/
-.page-header {
-  padding: 5px 0;
-  margin: 0;
-  border-bottom: 1px solid #eaeaea;
-  background-color: #fefefe; }
-  .page-header .container {
-    position: relative; }
-  .page-header .breadcrumb {
-    position: absolute;
-    top: 50%;
-    right: 15px;
-    margin-top: -18px; }
-  .page-header .page-title {
-    margin: 20px 0;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 18px;
-    font-weight: 500; }
-  .page-header.one-column {
-    padding: 20px 0; }
-    .page-header.one-column .breadcrumb {
-      position: relative;
-      padding: 15px 0 0 0;
-      right: 0; }
-  .page-header.has-intro {
-    padding: 40px 0; }
-    .page-header.has-intro .left {
-      width: 50%; }
-    .page-header.has-intro .page-title {
-      margin: 10px 0 15px 0; }
-    .page-header.has-intro .page-header-intro {
-      font-weight: 300;
-      font-size: 16px;
-      color: #cbcbcb; }
-  .page-header.has-background-image {
-    padding: 88px 0;
-    position: relative;
-    color: #fff;
-    background-image: url("../img/page-header-default-bg.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover; }
-    .page-header.has-background-image .page-title {
-      color: #fff; }
-    .page-header.has-background-image .overlay, .page-header.has-background-image .thumbnail-hover .dark-overlay, .thumbnail-hover .page-header.has-background-image .dark-overlay {
-      position: absolute;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.8); }
-    .page-header.has-background-image .breadcrumb > li + li:before {
-      color: #464646; }
-  .page-header.has-background-pattern {
-    padding: 40px 0;
-    background-image: url("../img/pattern-restaurant_icons.png");
-    background-repeat: repeat; }
-    .page-header.has-background-pattern .breadcrumb > li + li:before {
-      color: inherit; }
-  .page-header.breadcrumbs-only .breadcrumb {
-    position: relative;
-    margin: 0; }
-  @media screen and (max-width: 768px) {
-    .page-header .breadcrumb,
-    .page-header .page-title {
-      float: none !important;
-      text-align: center; }
-    .page-header .breadcrumb {
-      position: inherit;
-      top: inherit;
-      right: inherit; }
-    .page-header.has-intro {
-      text-align: center; }
-      .page-header.has-intro .left {
-        width: 100%;
-        margin-bottom: 15px; }
-      .page-header.has-intro .breadcrumb {
-        margin-bottom: 0; } }
 
 /* ------------
  * Footer
