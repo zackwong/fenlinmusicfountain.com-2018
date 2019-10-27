@@ -10,7 +10,9 @@
     <meta name="applicable-device" content="pc,mobile">
     <link rel="apple-touch-icon" href="{{ site.url }}/images/assets/water-show-icon.jpg">
     <meta name="apple-mobile-web-app-title" content="Water Show">
-    <link type="text/css" rel="stylesheet" href="/assets/application.css">
+    <link type="text/css" rel="stylesheet" href="/assets/application.css">{% if page.category == 'home' %}
+    <link type="text/css" rel="stylesheet" href="/assets/carousel.css">
+    <script type="text/javascript" src="/assets/application.js"></script>{% endif %}
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127399255-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -111,8 +113,6 @@
         </div>
       </div>
     </footer>
-    <div class="back-to-top"><a href="#"><img src="{{ site.url }}/images/assets/up.png" width="26" height="26" alt="Back To Top"></a></div>{% if page.category == 'home' %}
-    <link type="text/css" rel="stylesheet" href="/assets/carousel.css">
-    <script type="text/javascript" src="/assets/application.js"></script>{% endif %}
+    <div class="back-to-top"><a href="#"><img src="{{ site.url }}/images/assets/up.png" width="26" height="26" alt="Back To Top"></a></div>
   </body>
 </html>
