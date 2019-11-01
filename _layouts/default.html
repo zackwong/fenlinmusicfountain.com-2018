@@ -64,27 +64,11 @@
             </div>
           </div>
           <div class="col-sm-6 col-md-4 hidden-xs">
-            <div class="col-sm-12 col-md-12">
-              <h4 class="footer-heading">Products</h4>
-            </div>
-            <div class="col-sm-6 col-md-6">
-              <div itemscope itemtype="http://schema.org/Product">
-                <ul class="list-unstyled link-list">
-                  <li class="active"><a href="{{ site.url }}/small-fountain/">Small Fountain</a></li>
-                  <li><a itemprop="url" href="{{ site.url }}/middle-fountain/">Middle Fountain</a></li>
-                  <li><a itemprop="url" href="{{ site.url }}/large-fountain/">Large Fountain</a></li>
-                  <li><a itemprop="url" href="{{ site.url }}/water-rain-fountain/">Water Rain Fountain</a></li>
-                  <li><a itemprop="url" href="{{ site.url }}/dry-fountain/">Dry Fountain</a></li>
-                  <li><a itemprop="url" href="{{ site.url }}/jumping-jet/">Jumping Jet</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-6">
-              <div itemscope itemtype="http://schema.org/Product">
-                <ul class="list-unstyled link-list">{% for post in site.categories["products"] %}
-                  <li><a itemprop="url" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>{% endfor %}
-                </ul>
-              </div>
+            <h4 class="footer-heading">Products</h4>
+            <div itemscope itemtype="http://schema.org/Product">
+              <ul class="list-unstyled link-list">{% for post in site.categories["products"] %}
+                <li><a itemprop="url" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>{% endfor %}
+              </ul>
             </div>
           </div>
           <div class="col-sm-6 col-md-4 hidden-xs">
