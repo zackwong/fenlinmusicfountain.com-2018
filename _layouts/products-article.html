@@ -7,6 +7,31 @@ layout: pages
   </header>
   <div class="content">
     {{ content }}
+    <h4 class="margin-top-30">Our Service</h4>
+    <p class="margin-top-30"><b>A.Pre-sale service</b></p>
+    <p>Listenning clients requirements</p>
+    <p>Giving suggestion and good guidance to build a fountain</p>
+    <p>Free technical support (Design sketch, Drawing, Animation video we have)</p>
+    <p>Accounting Competitive price</p>
+    <p>Listing detailed accessories and show detail description</p>
+    <p class="margin-top-30"><b>B.In the sale service</b></p>
+    <p>Pro-active offering production process pictures</p>
+    <p>Effective communication</p>
+    <p>Update news timely</p>
+    <p>Check on a cheap courier on clients request</p>
+    <p>Provding user or installation manual</p>
+    <p>Enough spare parts</p>
+    <p>Arrange shipping on clients request</p>
+    <p>Preparing Customs cleanrance documents and send by DHL on clients request</p>
+    <p class="margin-top-30"><b>C. After sale service</b></p>
+    <p>Provide technical help by phone</p>
+    <p>Be available at phone and email, we will give the solution in 24 hours.</p>
+    <p>Quality investigation</p>{% if page.installation == 'installation' %}
+    <h4 class="margin-top-30">Installation procedure of {{ page.title }}</h4>
+    <p>1. Connect fountain frame with bolts</p>
+    <p>2. Connect fountain pump with connection</p>
+    <p>3. Find the cables from the fountain frame,and connect to the  music controller</p>
+    <p>4. Adjust all nozzles to be vertical,turn on the fountain by the music controller</p>{% endif %}
     {% include products-list.html %}
   </div>
 </article>
