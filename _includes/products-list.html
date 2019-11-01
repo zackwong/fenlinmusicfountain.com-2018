@@ -2,12 +2,11 @@
   <div class="section-heading-center section-heading-linethrough">
     <h2 class="heading">Products</h2>
   </div>{% endif %}{% for post in site.categories["products"] %}
-  <div class="col-sm-6 col-md-4 margin-bottom-30">
+  <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 margin-bottom-30">
     <div class="thumbnail">
       <a href="{{ site.url }}{{ post.url }}"><img src="/images/products/{{ post.image }}.jpg" alt="{{ post.title }}"></a>
       <div class="caption text-center">
-        <h4 class="margin-bottom-30">{{ post.title }}</h4>
-        <a href="{{ site.url }}{{ post.url }}" class="btn btn-primary">Learn More</a>
+        <h4 class="margin-top-20"><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h4>
       </div>
     </div>
   </div>{% endfor %}
