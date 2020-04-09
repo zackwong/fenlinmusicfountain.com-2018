@@ -12,7 +12,8 @@
     <meta name="apple-mobile-web-app-title" content="Water Show">
     <link type="text/css" rel="stylesheet" href="/assets/application.css">{% if page.category == 'home' %}
     <link type="text/css" rel="stylesheet" href="/assets/carousel.css">
-    <script type="text/javascript" src="/assets/application.js"></script>{% endif %}
+    <script type="text/javascript" src="/assets/application.js"></script>{% endif %}{% if page.layout == 'products-article' %}
+    <script src="https://recaptcha.net/recaptcha/api.js?render=6LdhCecUAAAAAOPaikB17lbIew8ZcCyXQZc8ee3"></script>{% endif %}
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127399255-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -85,7 +86,7 @@
         </div>
         <div class="footer-bottom">
           <div itemscope itemtype="http://schema.org/Organization">
-            <p class="copyright-text left">&copy;2017-2019 <span itemprop="name">Guangdong Watershow Fountain Equipment Project Co., Ltd</span> | <a href="{{ site.url }}/sitemap.xml">Sitemap</a></p>
+            <p class="copyright-text left">&copy;2017-2020 <span itemprop="name">Guangdong Watershow Fountain Equipment Project Co., Ltd</span> | <a href="{{ site.url }}/sitemap.xml">Sitemap</a></p>
           </div>
           <ul class="list-inline social-icons social-icons-small right">
             <li><a href="{{ site.facebook }}" target="_blank" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
@@ -97,6 +98,15 @@
         </div>
       </div>
     </footer>
-    <div class="back-to-top"><a href="#"><img src="{{ site.url }}/images/assets/up.png" width="26" height="26" alt="Back To Top"></a></div>
+    <div class="back-to-top"><a href="#"><img src="{{ site.url }}/images/assets/up.png" width="26" height="26" alt="Back To Top"></a></div>{% if page.layout == 'products-article' %}
+    <script type="text/javascript">
+    $(function () {
+        grecaptcha.ready(function () {
+            grecaptcha.execute('6LdhCecUAAAAAOPaikB17lbIew8ZcCyXQZc8ee3').then(function (token) {
+                $('#grecaptcha_token').val(token)
+            });
+        });
+    });
+    </script>{% endif %}
   </body>
 </html>
