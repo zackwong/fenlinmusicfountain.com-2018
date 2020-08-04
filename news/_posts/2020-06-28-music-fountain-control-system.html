@@ -3,11 +3,11 @@ layout: news-article
 permalink: /news/music-fountain-control-system.html
 category: news
 type: News
-image: music-fountain-control-system  
-title: Music Fountain Control System 
-description: In recent years, with rapid development of my country's technology, musical fountains have gradually become an important product in the urban leisure.    
+image: music-fountain-control-system
+title: Music Fountain Control System
+description: In recent years, with rapid development of my country's technology, musical fountains have gradually become an important product in the urban leisure.
 ---
-<p>The design of the <a href="{{ site.url }}" target="_blank">musical fountain</a> control system largely determines the performance of a music fountain. At present, domestic fountain projects are gradually developing in the direction of intelligence, networking, decentralization, and integration, which also puts forward higher requirements for the control system of the fountain.</p>
+<p>The design of the <a href="{{ site.url }}">musical fountain</a> control system largely determines the performance of a music fountain. At present, domestic fountain projects are gradually developing in the direction of intelligence, networking, decentralization, and integration, which also puts forward higher requirements for the control system of the fountain.</p>
 <p>The hardware control system of the popular music fountain control system in China mostly uses an Ethernet DIO (Digital Input/Output) card, connects the terminal board and the driver board, and controls the SSR (Solid State Relay) pump and SSR electromagnetic Valve, LED (Light Emitting Diode, light-emitting diode) light; Ethernet DA (Digital/Analog, digital-analog conversion) card is used to control the frequency conversion speed governor; Ethernet motion control card is used to control the stepper motor and one or two-dimensional nozzle; Adopt USB to DMX to generate DMX512 signals to control traditional stage lighting equipment such as computer lights, laser show machines, and flamethrowers. This control system has two defects:</p>
 <p>1) In most cases, the Ethernet DIO and DA cards are only equivalent to the physical extension of ISA (Industry Standard Architecture) BUS digital DIO cards. These cards are only responsible for ordinary input and output, and there is no calculation function. For example, to build a running spring with 192 outputs, it is necessary to use three 64-bit Ethernet DIO cards, which will occupy 3 IP (Internet Protocol) addresses, only 24 bytes of data are transmitted, and it must be calculated by the host computer to give Ethernet DIO card refresh output. If a fountain needs 1024 Bit control points, it needs 16 64-bit Ethernet DIO cards. There is a time difference between 16 IP sending data, which is not conducive to the synchronization of fountain devices.</p>
 <p>The Ethernet motion control card is equivalent to the Ethernet extension of the PC motion control card. 1. Every step of the two-dimensional nozzle must be directly programmed and controlled by a PC.</p>
